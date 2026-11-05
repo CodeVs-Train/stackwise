@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="Practical full-stack development lessons with explanations and hands-on exercises.">
+    <meta property="og:site_name" content="Stackwise">
+    <meta property="og:title" content="Course track — Stackwise">
+    <meta property="og:description" content="Practical full-stack development lessons with explanations and hands-on exercises.">
+    <meta property="og:type" content="website">
+    <title>Course track — Stackwise</title>
+    <link rel="icon" type="image/svg+xml" href="stackwise-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="courses.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Stackwise home"><span class="brand-mark">S</span> stackwise<span class="brand-period">.</span></a>
+      <nav class="topnav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#roadmap">Roadmap</a><a href="index.html#projects">Projects</a><a href="index.html#resources">Resources</a><a href="policy.html">Policy</a></nav>
+      <a class="topbar-cta" href="index.html#roadmap">All learning tracks <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main class="course-main">
+      <p class="course-breadcrumb"><a href="index.html#roadmap">Roadmap</a> / <span id="course-breadcrumb-title">Course</span></p>
+      <section class="course-hero">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> <span id="course-kicker">YOUR LEARNING PATH</span></div>
+        <h1 id="course-title">Loading your <span>course.</span></h1>
+        <p class="course-intro" id="course-intro"></p>
+        <div class="course-meta" id="course-meta"></div>
+      </section>
+
+      <div class="course-layout" id="course-layout" hidden>
+        <div class="course-lessons" id="course-lessons"></div>
+        <aside class="course-sidebar" aria-label="Course lessons">
+          <h2>In this course</h2>
+          <ol id="course-outline"></ol>
+          <div class="course-next"><a href="index.html#roadmap">← View all tracks</a></div>
+        </aside>
+      </div>
+      <section class="lesson-card" id="course-error" role="status" hidden>
+        <h2>Course not found</h2>
+        <p>Choose a learning track from the roadmap to view its lessons.</p>
+        <a class="button button-primary" href="index.html#roadmap">Back to the roadmap <span aria-hidden="true">↗</span></a>
+      </section>
+    </main>
+
+    <footer class="course-footer">
+      <div class="footer-note"><a class="brand" href="index.html"><span class="brand-mark">S</span> stackwise<span class="brand-period">.</span></a><p>A learning roadmap for the curious builders.</p><span>MADE FOR FUTURE STACKS&nbsp; ↗</span></div>
+    </footer>
+  </body>
+</html>

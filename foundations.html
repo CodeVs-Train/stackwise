@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f7f2">
+    <meta name="description" content="Learn how the web works, use the command line and Git, practice programming fundamentals, and build a reliable developer workflow.">
+    <meta property="og:site_name" content="Stackwise">
+    <meta property="og:title" content="Web foundations course — Stackwise">
+    <meta property="og:description" content="Learn how the web works, use the command line and Git, practice programming fundamentals, and build a reliable developer workflow.">
+    <meta property="og:type" content="website">
+    <title>Web foundations course — Stackwise</title>
+    <link rel="icon" type="image/svg+xml" href="stackwise-icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Stackwise home"><span class="brand-mark">S</span> stackwise<span class="brand-period">.</span></a>
+      <nav class="topnav" aria-label="Main navigation"><a href="index.html">Home</a><a href="index.html#roadmap">Roadmap</a><a href="index.html#projects">Projects</a><a href="index.html#resources">Resources</a><a href="policy.html">Policy</a></nav>
+      <a class="topbar-cta" href="index.html#roadmap">All learning tracks <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">☰</button>
+    </header>
+
+    <main class="course-main">
+      <p class="course-breadcrumb"><a href="index.html#roadmap">Roadmap</a> / Web foundations</p>
+      <section class="course-hero">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> TRACK 01 / START HERE</div>
+        <h1>Build your <span>web foundations.</span></h1>
+        <p class="course-intro">Before building an app, learn what happens when a browser requests a page, how to work with files and Git, and how to break a problem into steps a program can follow. Work through these four lessons in order and try each activity as you go.</p>
+        <div class="course-meta"><span>4 lessons</span><span>Beginner friendly</span><span>Learn by doing</span></div>
+      </section>
+
+      <div class="course-layout">
+        <div class="course-lessons">
+          <article class="lesson-card" id="how-the-web-works">
+            <span class="lesson-kicker">LESSON 01</span>
+            <h2>How the web works</h2>
+            <p>A web page is delivered through a conversation between a client and a server. Your browser is the client: it asks for a resource. A server receives that request and sends back a response, often containing HTML, CSS, JavaScript, or data.</p>
+            <h3>From a URL to a page</h3>
+            <ol>
+              <li>You enter a URL such as <code>https://example.com/products</code>. The browser uses DNS to find the network address associated with the domain name.</li>
+              <li>For an HTTPS site, the browser establishes an encrypted connection with the server.</li>
+              <li>The browser sends an HTTP request. The method describes the action: <code>GET</code> asks to read something; <code>POST</code> commonly sends new information.</li>
+              <li>The server responds with a status code and content. For example, <code>200</code> means the request succeeded, <code>404</code> means the resource was not found, and <code>500</code> indicates a server error.</li>
+              <li>The browser reads the returned files, requests any referenced assets, and renders the page.</li>
+            </ol>
+            <div class="lesson-callout"><strong>Keep the layers straight:</strong> DNS helps locate a server; HTTP defines the request and response; HTML, CSS, and JavaScript define the page the browser displays.</div>
+            <h3>Try it</h3>
+            <p>Open your browser’s developer tools and select the Network panel. Reload a page, choose its document request, and identify the request method, status code, and response type. Notice that one page load usually makes many requests for images, stylesheets, and scripts.</p>
+          </article>
+
+          <article class="lesson-card" id="command-line-and-git">
+            <span class="lesson-kicker">LESSON 02</span>
+            <h2>Command line &amp; Git</h2>
+            <p>The command line lets you navigate folders and run development tools. Git records changes to your project so you can review your work and return to earlier versions. A Git repository is the project history stored alongside your files.</p>
+            <h3>A small Git workflow</h3>
+            <p>Run these commands from your project folder. Git may ask you to configure your name and email the first time you commit.</p>
+            <pre class="lesson-example"><code>git init
+git status
+git add index.html
+git commit -m "Add the home page"
+git log --oneline</code></pre>
+            <ul>
+              <li><code>git init</code> starts tracking the folder as a repository.</li>
+              <li><code>git status</code> shows which files are changed and whether they are staged.</li>
+              <li><code>git add</code> stages the specific changes you intend to save.</li>
+              <li><code>git commit</code> creates a named snapshot of the staged changes.</li>
+              <li><code>git log</code> shows the snapshots already recorded.</li>
+            </ul>
+            <div class="lesson-callout">A commit is a checkpoint, not a backup service. Make focused commits with clear messages, and keep a separate backup or remote repository for important work.</div>
+            <h3>Try it</h3>
+            <p>Create a project folder, initialize Git, add a short README, and commit it. Change one sentence, run <code>git status</code>, then stage and commit the update. Compare the two entries in <code>git log</code>.</p>
+          </article>
+
+          <article class="lesson-card" id="programming-fundamentals">
+            <span class="lesson-kicker">LESSON 03</span>
+            <h2>Programming fundamentals</h2>
+            <p>Programs turn instructions and data into results. Most everyday code is built from a few reusable ideas: values, variables, decisions, repetition, functions, and data structures.</p>
+            <ul>
+              <li><strong>Values and variables:</strong> values are pieces of data; a variable gives a value a name you can use later.</li>
+              <li><strong>Conditions:</strong> an <code>if</code> statement chooses what to do based on whether a condition is true.</li>
+              <li><strong>Loops:</strong> loops repeat work for a collection or until a condition changes.</li>
+              <li><strong>Functions:</strong> functions package a task behind a name, accept inputs, and can return a result.</li>
+              <li><strong>Collections:</strong> arrays hold ordered items; objects group related values under named properties.</li>
+            </ul>
+            <pre class="lesson-example"><code>const prices = [12, 8, 15];
+
+function totalWithTax(items, taxRate) {
+  const subtotal = items.reduce((sum, price) => sum + price, 0);
+  return subtotal * (1 + taxRate);
+}
+
+const total = totalWithTax(prices, 0.1);
+if (total > 30) {
+  console.log("The order is over 30");
+}</code></pre>
+            <p>Here, <code>prices</code> is an array, <code>totalWithTax</code> is a function, and <code>if</code> makes a decision using the returned number. Breaking the work into named steps makes it easier to understand and test.</p>
+            <h3>Try it</h3>
+            <p>Add another price to the array. Change the tax rate and check the result. Then write a function that returns the largest number in an array, and test it with an empty array as well as a few numbers.</p>
+          </article>
+
+          <article class="lesson-card" id="developer-workflow">
+            <span class="lesson-kicker">LESSON 04</span>
+            <h2>Developer workflow</h2>
+            <p>A dependable workflow is a repeatable loop: understand the task, make one small change, run the project, check the result, and save a useful checkpoint. Small steps make mistakes easier to find.</p>
+            <ol>
+              <li><strong>Understand:</strong> describe what should happen and how you will tell when it works.</li>
+              <li><strong>Inspect:</strong> read the relevant files and check the current behavior before editing.</li>
+              <li><strong>Change:</strong> make one focused improvement rather than several unrelated changes at once.</li>
+              <li><strong>Verify:</strong> run the app and check the important paths. Read error messages and use browser developer tools to inspect console and network failures.</li>
+              <li><strong>Review and save:</strong> inspect the diff, remove accidental changes, then commit with a message describing the result.</li>
+            </ol>
+            <h3>Debug with evidence</h3>
+            <p>When something breaks, reproduce it consistently, read the first relevant error, and narrow down where the observed result diverges from what you expected. Check one cause at a time, then repeat the same test after making a fix.</p>
+            <div class="lesson-callout"><strong>Good habit:</strong> write down the steps to reproduce a bug. A clear reproduction is useful to you, your teammates, and anyone reviewing the fix.</div>
+            <h3>Try it</h3>
+            <p>Choose a small change in your project. Write down its expected result, implement it, test it in the browser, and review the Git diff before committing. If you find a problem, record the reproduction steps and investigate one hypothesis at a time.</p>
+          </article>
+
+          <section class="lesson-card" aria-labelledby="course-complete">
+            <span class="lesson-kicker">YOU’RE READY FOR WHAT’S NEXT</span>
+            <h2 id="course-complete">Put the foundations together</h2>
+            <p>You have now traced a request from browser to server, practiced recording project changes, used core programming concepts, and followed a repeatable build-and-check workflow. Apply them together: make a small page, inspect its requests, change it in a focused step, and commit the result.</p>
+            <a class="button button-primary" href="index.html#roadmap">Back to the roadmap <span aria-hidden="true">↗</span></a>
+          </section>
+        </div>
+
+        <aside class="course-sidebar" aria-label="Course lessons">
+          <h2>In this course</h2>
+          <ol>
+            <li><a href="#how-the-web-works">How the web works</a></li>
+            <li><a href="#command-line-and-git">Command line &amp; Git</a></li>
+            <li><a href="#programming-fundamentals">Programming fundamentals</a></li>
+            <li><a href="#developer-workflow">Developer workflow</a></li>
+          </ol>
+          <div class="course-next"><a href="index.html#roadmap">← View all tracks</a></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="course-footer">
+      <div class="footer-note"><a class="brand" href="index.html"><span class="brand-mark">S</span> stackwise<span class="brand-period">.</span></a><p>A learning roadmap for the curious builders.</p><span>MADE FOR FUTURE STACKS&nbsp; ↗</span></div>
+    </footer>
+  </body>
+</html>
